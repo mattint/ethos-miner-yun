@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>ethos-miner-yun</title>
+		<style>
+			#mcd {
+				visibility: hidden;
+			}
+		</style>
+		<script>
+			function show_mc() {
+				var e = document.getElementById("mcd");
+				e.style = "visibility: visible !important;";
+			}
+			window.onload = function() {
+				var m = document.getElementById("mc");
+				m.addEventListener("click", show_mc);
+			};
+		</script>
+	</head>
+	<body>
+		<h1>Your action is performed successfully!</h1>
+		<form action="/" method="POST">
+			<h1>Select action</h1>
+			<p><input name="cmd" type="radio" value="o">Poweron</p>
+			<p><input name="cmd" type="radio" value="s" checked>Shutdown</p>
+			<p><input name="cmd" type="radio" value="r">Reboot</p>
+			<div id="mcd" style="">
+				<p><input name="cmd" type="radio" value="mr">Run Miner</p>
+				<p><input name="cmd" type="radio" value="ms"/>Stop Miner</p>
+			</div>
+			<p><button>Perform</button></p>
+		</form>
+		<p><button id="mc">Miner Controls</button></p> 
+	</body>
+</html>

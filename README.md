@@ -3,6 +3,7 @@ An Arduino Yun client for ethos-miner-com
 # Usage
 * Connect your Front Panel Power- to GND.
 * Connect your Front Panel Power+ to Pin 36.
+* Connect your Reset Pin to Pin 35.
 * Flash your Arduino Yun with `avr.c`
 * Copy other files to OpenWrt controller
 * Install gems `net-telnet`, `sinatra`, `digest` and `rack`

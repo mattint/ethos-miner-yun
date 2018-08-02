@@ -2,8 +2,10 @@
 #include <Serial.h>
 
 int b;
+int p = 36;
 
 void setup() {
+	pinMode(p, OUTPUT);
 	Bridge.begin();
 	Console.begin();
 	while(!Console);
@@ -13,6 +15,12 @@ void setup() {
 void loop() {
 	if(Console.available() > 0) {
 		b = Console.read();
-		Serial.write(b);
+		if b != "o" {
+			Serial.write(b);
+		} else {
+			digitalWrite(p, HIGH);
+			delay(500);
+			digitalWrite(p, LOW);
+		}
 	}
 }
